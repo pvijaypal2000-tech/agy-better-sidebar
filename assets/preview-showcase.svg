@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" fill="none">
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1200" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EEF4FB"/>
+      <stop offset="55%" stop-color="#F7FAFF"/>
+      <stop offset="100%" stop-color="#E6EEF9"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="114%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#1E3A68" flood-opacity="0.13"/>
+    </filter>
+    <filter id="floatShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1E3A68" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="620" rx="22" fill="url(#heroBg)"/>
+
+  <!-- Main Typora Lapis Window -->
+  <g filter="url(#cardShadow)">
+    <rect x="48" y="42" width="840" height="536" rx="16" fill="#FFFFFF" stroke="#DCE6F3" stroke-width="1.5"/>
+
+    <!-- Unified Typora Left Sidebar -->
+    <path d="M49 58C49 49.7157 55.7157 43 64 43H248V577H64C55.7157 577 49 570.284 49 562V58Z" fill="#EFF3FA"/>
+    <line x1="248" y1="43" x2="248" y2="577" stroke="#DCE6F3"/>
+
+    <!-- Project Header -->
+    <rect x="64" y="58" width="168" height="28" rx="7" fill="#FFFFFF" fill-opacity="0.7"/>
+    <circle cx="78" cy="72" r="5" fill="#4870AC"/>
+    <text x="90" y="76" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">REDIRECT-HLH 课题组</text>
+
+    <!-- Segmented Tabs: 最近 | 文件 | 大纲 -->
+    <rect x="64" y="96" width="168" height="28" rx="7" fill="#E1EAF6"/>
+    <rect x="67" y="99" width="53" height="22" rx="5" fill="#FFFFFF"/>
+    <text x="93" y="114" text-anchor="middle" fill="#4870AC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11" font-weight="700">最近 3</text>
+    <text x="148" y="114" text-anchor="middle" fill="#5E6C84" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">文件</text>
+    <text x="202" y="114" text-anchor="middle" fill="#5E6C84" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">大纲</text>
+
+    <!-- Recent Items -->
+    <rect x="62" y="138" width="172" height="32" rx="7" fill="#DCE8F8"/>
+    <rect x="70" y="147" width="22" height="14" rx="3" fill="#38BDF8" fill-opacity="0.2"/>
+    <text x="81" y="157" text-anchor="middle" fill="#0284C7" font-family="Consolas, monospace" font-size="8.5" font-weight="700">MD</text>
+    <text x="98" y="158" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5" font-weight="600">后续任务路线图.md</text>
+    <rect x="208" y="147" width="18" height="14" rx="3" fill="#10B981" fill-opacity="0.16"/>
+    <text x="217" y="157" text-anchor="middle" fill="#059669" font-family="Segoe UI, PingFang SC, sans-serif" font-size="9" font-weight="700">新</text>
+
+    <rect x="70" y="185" width="22" height="14" rx="3" fill="#22C55E" fill-opacity="0.18"/>
+    <text x="81" y="195" text-anchor="middle" fill="#16A34A" font-family="Consolas, monospace" font-size="8.5" font-weight="700">CSV</text>
+    <text x="98" y="196" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">search_log.csv</text>
+    <text x="206" y="196" fill="#8C9BAB" font-family="Segoe UI, PingFang SC, sans-serif" font-size="10">2分前</text>
+
+    <rect x="70" y="219" width="22" height="14" rx="3" fill="#276DC3" fill-opacity="0.18"/>
+    <text x="81" y="229" text-anchor="middle" fill="#276DC3" font-family="Consolas, monospace" font-size="8.5" font-weight="700">R</text>
+    <text x="98" y="230" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">meta_analysis.R</text>
+    <text x="206" y="230" fill="#8C9BAB" font-family="Segoe UI, PingFang SC, sans-serif" font-size="10">5分前</text>
+
+    <!-- Whisper-Thin Top Header -->
+    <line x1="248" y1="84" x2="888" y2="84" stroke="#EBF1F8"/>
+    <rect x="264" y="54" width="142" height="24" rx="6" fill="#EAF1FA" stroke="#C5D7EE"/>
+    <text x="276" y="70" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5" font-weight="600">后续任务路线图.md ×</text>
+    <text x="420" y="70" fill="#667085" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">search_log.csv ×</text>
+
+    <!-- Top Right Minimal Pills -->
+    <rect x="626" y="54" width="64" height="24" rx="12" fill="#EAF1FA" stroke="#BFD3EC"/>
+    <text x="658" y="70" text-anchor="middle" fill="#4870AC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11" font-weight="600">三线表</text>
+
+    <rect x="698" y="54" width="84" height="24" rx="12" fill="#4870AC"/>
+    <text x="740" y="70" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11" font-weight="600">✨ AI 伴读</text>
+
+    <rect x="790" y="54" width="78" height="24" rx="12" fill="#FFFFFF" stroke="#DCE6F3"/>
+    <text x="829" y="70" text-anchor="middle" fill="#4870AC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11">青金石 ▾</text>
+
+    <!-- Typora #write Paper Content -->
+    <text x="292" y="132" fill="#28426B" font-family="Georgia, Songti SC, serif" font-size="22" font-weight="700">系统综述与临床结局分析路线图</text>
+    <line x1="292" y1="146" x2="844" y2="146" stroke="#E2EAF4" stroke-width="1.5"/>
+
+    <!-- Signature Lapis H2 Capsule -->
+    <rect x="292" y="168" width="236" height="30" rx="6" fill="#EAF1FA"/>
+    <rect x="292" y="168" width="4" height="30" rx="2" fill="#4870AC"/>
+    <text x="308" y="188" fill="#28426B" font-family="Georgia, Songti SC, serif" font-size="15" font-weight="700">1. 阶段推进与分工（学术三线表）</text>
+
+    <!-- Academic Three-Line Table -->
+    <line x1="292" y1="216" x2="844" y2="216" stroke="#28426B" stroke-width="2"/>
+    <text x="304" y="236" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">阶段</text>
+    <text x="418" y="236" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">核心任务内容</text>
+    <text x="646" y="236" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">工具与方法</text>
+    <text x="782" y="236" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="700">周期</text>
+    <line x1="292" y1="246" x2="844" y2="246" stroke="#28426B" stroke-width="1.2"/>
+
+    <text x="304" y="270" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="600">E 去重与初筛</text>
+    <text x="418" y="270" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">多库合并去重、双盲试点初筛与全文获取</text>
+    <text x="646" y="270" fill="#5E6C84" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">EndNote · PRISMA</text>
+    <text x="782" y="270" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">3–5 周</text>
+
+    <rect x="292" y="282" width="552" height="30" rx="4" fill="#EAF2FC"/>
+    <text x="304" y="302" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="600">F 提取与偏倚评估</text>
+    <text x="418" y="302" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">L1/L2/L3 结局判定、双人独立提取核对</text>
+    <text x="646" y="302" fill="#5E6C84" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">CSV 模板 · RoB 2</text>
+    <text x="782" y="302" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">3–4 周</text>
+
+    <text x="304" y="334" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12" font-weight="600">G 统计合成</text>
+    <text x="418" y="334" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">随机效应模型合并、异质性与森林图绘制</text>
+    <text x="646" y="334" fill="#5E6C84" font-family="Consolas, monospace" font-size="11.5">R (meta / metafor)</text>
+    <text x="782" y="334" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">2–3 周</text>
+    <line x1="292" y1="348" x2="844" y2="348" stroke="#28426B" stroke-width="2"/>
+
+    <!-- Section 2: Formula & Code Fence -->
+    <rect x="292" y="374" width="212" height="30" rx="6" fill="#EAF1FA"/>
+    <rect x="292" y="374" width="4" height="30" rx="2" fill="#4870AC"/>
+    <text x="308" y="394" fill="#28426B" font-family="Georgia, Songti SC, serif" font-size="15" font-weight="700">2. R 统计脚本与伴读卡片</text>
+
+    <rect x="292" y="418" width="552" height="106" rx="11" fill="#F6F9FD" stroke="#DCE6F3"/>
+    <text x="310" y="444" fill="#6E7781" font-family="Consolas, monospace" font-size="12" font-style="italic"># 计算二分类结局合并风险比 (Risk Ratio)</text>
+    <text x="310" y="468" fill="#CF222E" font-family="Consolas, monospace" font-size="12.5" font-weight="600">m_bin</text>
+    <text x="354" y="468" fill="#24292F" font-family="Consolas, monospace" font-size="12.5">&lt;- </text>
+    <text x="376" y="468" fill="#8250DF" font-family="Consolas, monospace" font-size="12.5">metabin</text>
+    <text x="432" y="468" fill="#24292F" font-family="Consolas, monospace" font-size="12.5">(event.e, n.e, event.c, n.c, sm = </text>
+    <text x="684" y="468" fill="#0A3069" font-family="Consolas, monospace" font-size="12.5">"RR"</text>
+    <text x="716" y="468" fill="#24292F" font-family="Consolas, monospace" font-size="12.5">, random = </text>
+    <text x="794" y="468" fill="#0550AE" font-family="Consolas, monospace" font-size="12.5">TRUE</text>
+    <text x="826" y="468" fill="#24292F" font-family="Consolas, monospace" font-size="12.5">)</text>
+    <rect x="308" y="480" width="320" height="24" rx="4" fill="#4870AC" fill-opacity="0.14"/>
+    <text x="312" y="497" fill="#8250DF" font-family="Consolas, monospace" font-size="12.5">forest</text>
+    <text x="358" y="497" fill="#24292F" font-family="Consolas, monospace" font-size="12.5">(m_bin, comb.random = TRUE, digits = 2)</text>
+
+    <!-- Floating Selection AI Bubble -->
+    <g filter="url(#floatShadow)">
+      <rect x="576" y="520" width="286" height="40" rx="20" fill="#FFFFFF" stroke="#B7CEEB"/>
+      <text x="596" y="544" fill="#4870AC" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5" font-weight="600">已选中片段</text>
+      <rect x="668" y="527" width="102" height="26" rx="13" fill="#4870AC"/>
+      <text x="719" y="544" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5" font-weight="600">✨ 大白话解读</text>
+      <rect x="776" y="527" width="76" height="26" rx="13" fill="#F2F6FC" stroke="#DCE6F3"/>
+      <text x="814" y="544" text-anchor="middle" fill="#344054" font-family="Segoe UI, PingFang SC, sans-serif" font-size="11.5">引用提问</text>
+    </g>
+  </g>
+
+  <!-- Right Side Feature & Theme Stack -->
+  <g filter="url(#cardShadow)">
+    <rect x="916" y="42" width="236" height="252" rx="16" fill="#FFFFFF" stroke="#DCE6F3"/>
+    <text x="938" y="74" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14" font-weight="700">4 套经典 Typora 主题</text>
+
+    <rect x="934" y="92" width="200" height="38" rx="9" fill="#EAF1FA" stroke="#B9D0EC"/>
+    <circle cx="954" cy="111" r="7" fill="#4870AC"/>
+    <text x="970" y="115" fill="#28426B" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="700">Lapis 青金石（默认）</text>
+
+    <rect x="934" y="138" width="200" height="38" rx="9" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <circle cx="954" cy="157" r="7" fill="#0969DA"/>
+    <text x="970" y="161" fill="#1F2328" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="600">GitHub 极简纯白</text>
+
+    <rect x="934" y="184" width="200" height="38" rx="9" fill="#FBF8F1" stroke="#DFD6C5"/>
+    <circle cx="954" cy="203" r="7" fill="#8A4F26"/>
+    <text x="970" y="207" fill="#2C251E" font-family="Georgia, Songti SC, serif" font-size="12.5" font-weight="600">Newsprint 暖纸书卷</text>
+
+    <rect x="934" y="230" width="200" height="38" rx="9" fill="#19202C" stroke="#283244"/>
+    <circle cx="954" cy="249" r="7" fill="#7AA2F7"/>
+    <text x="970" y="253" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12.5" font-weight="600">Lapis Night 柔和暗夜</text>
+  </g>
+
+  <!-- Right Bottom Highlight Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="916" y="316" width="236" height="262" rx="16" fill="#19202C" stroke="#283244"/>
+    <text x="938" y="350" fill="#A9C4FF" font-family="Segoe UI, PingFang SC, sans-serif" font-size="14" font-weight="700">告别生硬源码与绿底 Diff</text>
+    <text x="938" y="382" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">✓ 接管 66 种代码/文档后缀</text>
+    <text x="938" y="410" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">✓ 刚改文件自动排顶栏展开</text>
+    <text x="938" y="438" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">✓ 圆角卡片表 ↔ 论文三线表</text>
+    <text x="938" y="466" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">✓ KaTeX 公式 + Mermaid 图</text>
+    <text x="938" y="494" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">✓ 0 额外费用划词大白话伴读</text>
+    <text x="938" y="522" fill="#D8E1EE" font-family="Segoe UI, PingFang SC, sans-serif" font-size="12">✓ 纯只读安全保护零误删</text>
+    <rect x="938" y="538" width="192" height="24" rx="12" fill="#7AA2F7" fill-opacity="0.16"/>
+    <text x="1034" y="554" text-anchor="middle" fill="#9EC0FF" font-family="Consolas, monospace" font-size="10.5">100% Offline MCP App</text>
+  </g>
+</svg>

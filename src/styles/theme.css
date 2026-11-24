@@ -1,0 +1,1279 @@
+/* ==========================================================================
+   Better Sidebar v2.0 — Typora Lapis Chromeless Paper Aesthetic
+   Themes: lapis (default), github, newsprint, night
+   Table Styles: card (Lapis rounded zebra), threeline (Academic 三线表)
+   ========================================================================== */
+
+:root,
+:root[data-theme-preset="lapis"] {
+  --tp-font-sans: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei UI", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --tp-font-serif: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", Georgia, "Times New Roman", serif;
+  --tp-font-heading: var(--tp-font-serif);
+  --tp-font-body: var(--tp-font-sans);
+  --tp-font-mono: "JetBrains Mono", "Cascadia Code", "Fira Code", Consolas, monospace;
+
+  --tp-canvas-bg: #f5f8fc;
+  --tp-paper-bg: #ffffff;
+  --tp-sidebar-bg: #eff3fa;
+  --tp-elevated-bg: #ffffff;
+  --tp-hover-bg: rgba(72, 112, 172, 0.08);
+  --tp-active-bg: rgba(72, 112, 172, 0.14);
+
+  --tp-border: #e2eaf4;
+  --tp-border-subtle: rgba(72, 112, 172, 0.12);
+
+  --tp-text: #344054;
+  --tp-text-muted: #5e6c84;
+  --tp-text-faint: #8c9bab;
+
+  --tp-heading: #28426b;
+  --tp-accent: #4870ac;
+  --tp-accent-soft: #eaf1fa;
+  --tp-accent-border: rgba(72, 112, 172, 0.28);
+
+  --tp-h2-bg: #eaf1fa;
+  --tp-h2-bar: #4870ac;
+  --tp-h2-style: capsule;
+
+  --tp-code-bg: #f6f9fd;
+  --tp-code-inline-bg: #edf3fb;
+  --tp-code-inline-fg: #34568b;
+
+  --tp-table-head: #eef4fb;
+  --tp-table-zebra: #fafcff;
+  --tp-table-hover: #eaf2fc;
+
+  --tp-shadow-soft: 0 2px 14px rgba(40, 66, 107, 0.06);
+  --tp-shadow-float: 0 10px 32px rgba(25, 42, 70, 0.14);
+  --tp-checker-a: #e6edf6;
+  --tp-checker-b: #f7faff;
+
+  /* Backward-compatible aliases for inner components */
+  --ide-bg: var(--tp-paper-bg);
+  --ide-bg-sidebar: var(--tp-sidebar-bg);
+  --ide-bg-elevated: var(--tp-elevated-bg);
+  --ide-bg-hover: var(--tp-hover-bg);
+  --ide-bg-active: var(--tp-active-bg);
+  --ide-border: var(--tp-border);
+  --ide-border-subtle: var(--tp-border-subtle);
+  --ide-text: var(--tp-text);
+  --ide-text-muted: var(--tp-text-muted);
+  --ide-text-faint: var(--tp-text-faint);
+  --ide-accent: var(--tp-accent);
+  --ide-accent-soft: var(--tp-accent-soft);
+  --ide-accent-border: var(--tp-accent-border);
+  --ide-code-bg: var(--tp-code-bg);
+  --ide-badge-bg: var(--tp-accent-soft);
+  --ide-shadow: var(--tp-shadow-float);
+  --ide-font-sans: var(--tp-font-sans);
+  --ide-font-mono: var(--tp-font-mono);
+}
+
+:root[data-theme-preset="github"] {
+  --tp-font-heading: var(--tp-font-sans);
+  --tp-font-body: var(--tp-font-sans);
+
+  --tp-canvas-bg: #ffffff;
+  --tp-paper-bg: #ffffff;
+  --tp-sidebar-bg: #f6f8fa;
+  --tp-elevated-bg: #ffffff;
+  --tp-hover-bg: rgba(31, 35, 40, 0.06);
+  --tp-active-bg: rgba(9, 105, 218, 0.1);
+
+  --tp-border: #d8dee4;
+  --tp-border-subtle: rgba(31, 35, 40, 0.1);
+
+  --tp-text: #1f2328;
+  --tp-text-muted: #57606a;
+  --tp-text-faint: #8c959f;
+
+  --tp-heading: #1f2328;
+  --tp-accent: #0969da;
+  --tp-accent-soft: rgba(9, 105, 218, 0.09);
+  --tp-accent-border: rgba(9, 105, 218, 0.26);
+
+  --tp-h2-bg: transparent;
+  --tp-h2-bar: transparent;
+
+  --tp-code-bg: #f6f8fa;
+  --tp-code-inline-bg: rgba(175, 184, 193, 0.2);
+  --tp-code-inline-fg: #1f2328;
+
+  --tp-table-head: #f6f8fa;
+  --tp-table-zebra: #fbfcfd;
+  --tp-table-hover: #f0f6fc;
+}
+
+:root[data-theme-preset="newsprint"] {
+  --tp-font-heading: var(--tp-font-serif);
+  --tp-font-body: var(--tp-font-serif);
+
+  --tp-canvas-bg: #f4efe4;
+  --tp-paper-bg: #fbf8f1;
+  --tp-sidebar-bg: #eee7d8;
+  --tp-elevated-bg: #fcfaf4;
+  --tp-hover-bg: rgba(105, 78, 52, 0.08);
+  --tp-active-bg: rgba(138, 79, 38, 0.14);
+
+  --tp-border: #dfd6c5;
+  --tp-border-subtle: rgba(105, 78, 52, 0.14);
+
+  --tp-text: #2c251e;
+  --tp-text-muted: #5f5346;
+  --tp-text-faint: #8c7f6f;
+
+  --tp-heading: #231c15;
+  --tp-accent: #8a4f26;
+  --tp-accent-soft: rgba(138, 79, 38, 0.11);
+  --tp-accent-border: rgba(138, 79, 38, 0.28);
+
+  --tp-h2-bg: rgba(138, 79, 38, 0.08);
+  --tp-h2-bar: #8a4f26;
+
+  --tp-code-bg: #f3ede0;
+  --tp-code-inline-bg: #ede5d4;
+  --tp-code-inline-fg: #6b3c1b;
+
+  --tp-table-head: #efe8d8;
+  --tp-table-zebra: #f8f4ea;
+  --tp-table-hover: #ede4d1;
+}
+
+:root[data-theme-preset="night"] {
+  --tp-font-heading: var(--tp-font-serif);
+  --tp-font-body: var(--tp-font-sans);
+
+  --tp-canvas-bg: #141923;
+  --tp-paper-bg: #19202c;
+  --tp-sidebar-bg: #131822;
+  --tp-elevated-bg: #202938;
+  --tp-hover-bg: rgba(122, 162, 247, 0.1);
+  --tp-active-bg: rgba(122, 162, 247, 0.16);
+
+  --tp-border: #283244;
+  --tp-border-subtle: rgba(148, 163, 184, 0.14);
+
+  --tp-text: #d8e1ee;
+  --tp-text-muted: #98a6bd;
+  --tp-text-faint: #68768e;
+
+  --tp-heading: #a9c4ff;
+  --tp-accent: #7aa2f7;
+  --tp-accent-soft: rgba(122, 162, 247, 0.14);
+  --tp-accent-border: rgba(122, 162, 247, 0.32);
+
+  --tp-h2-bg: rgba(122, 162, 247, 0.13);
+  --tp-h2-bar: #7aa2f7;
+
+  --tp-code-bg: #141a24;
+  --tp-code-inline-bg: rgba(122, 162, 247, 0.14);
+  --tp-code-inline-fg: #9ec0ff;
+
+  --tp-table-head: #20293a;
+  --tp-table-zebra: #1c2432;
+  --tp-table-hover: #243046;
+
+  --tp-shadow-soft: 0 4px 18px rgba(0, 0, 0, 0.28);
+  --tp-shadow-float: 0 14px 38px rgba(0, 0, 0, 0.52);
+  --tp-checker-a: #1e293b;
+  --tp-checker-b: #131924;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--tp-paper-bg);
+  color: var(--tp-text);
+  font-family: var(--tp-font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Feather-light scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 138, 164, 0.24);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 138, 164, 0.45);
+}
+
+/* ==========================================================================
+   1. Typora Chromeless Shell & Unified Sidebar
+   ========================================================================== */
+
+.tp-shell {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--tp-paper-bg);
+  color: var(--tp-text);
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-sidebar {
+  width: 248px;
+  flex-shrink: 0;
+  background: var(--tp-sidebar-bg);
+  border-right: 1px solid var(--tp-border);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  z-index: 30;
+  user-select: none;
+}
+
+.tp-sidebar.drawer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: min(268px, 84vw);
+  box-shadow: var(--tp-shadow-float);
+}
+
+.tp-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.22);
+  backdrop-filter: blur(1px);
+  z-index: 25;
+}
+
+.tp-sidebar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 8px;
+  gap: 6px;
+}
+
+.tp-ws-pill {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 4px 7px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--tp-heading);
+  text-align: left;
+  transition: background 0.14s ease, border-color 0.14s ease;
+}
+
+.tp-ws-pill:hover {
+  background: var(--tp-hover-bg);
+  border-color: var(--tp-border-subtle);
+}
+
+.tp-sidebar-tabs {
+  display: flex;
+  margin: 0 12px 8px;
+  padding: 3px;
+  background: rgba(128, 145, 170, 0.1);
+  border-radius: 8px;
+  gap: 2px;
+}
+
+.tp-sidebar-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--tp-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.14s ease;
+}
+
+.tp-sidebar-tab:hover {
+  color: var(--tp-text);
+}
+
+.tp-sidebar-tab.active {
+  background: var(--tp-paper-bg);
+  color: var(--tp-accent);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.tp-sidebar-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Reuse clean tree list styles inside Typora sidebar */
+.ide-search-box {
+  padding: 2px 12px 8px;
+}
+
+.ide-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tp-paper-bg);
+  border: 1px solid var(--tp-border);
+  border-radius: 8px;
+  padding: 5px 9px;
+}
+
+.ide-search-input-wrap:focus-within {
+  border-color: var(--tp-accent);
+  box-shadow: 0 0 0 2px var(--tp-accent-soft);
+}
+
+.ide-search-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: var(--tp-text);
+}
+
+.ide-tree-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2px 8px 16px;
+}
+
+.ide-tree-row,
+.ide-outline-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  background: transparent;
+  border-radius: 7px;
+  padding: 5px 9px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12.5px;
+  color: var(--tp-text);
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.ide-tree-row:hover,
+.ide-outline-item:hover {
+  background: var(--tp-hover-bg);
+}
+
+.ide-tree-row.selected {
+  background: var(--tp-active-bg);
+  color: var(--tp-accent);
+  font-weight: 600;
+}
+
+.ide-tree-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ide-tree-sub {
+  font-size: 10.5px;
+  color: var(--tp-text-faint);
+  max-width: 84px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. Whisper-Thin Typora Top Header & Minimal Pills
+   ========================================================================== */
+
+.tp-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--tp-paper-bg);
+  position: relative;
+}
+
+.tp-topbar {
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  gap: 8px;
+  background: var(--tp-paper-bg);
+  border-bottom: 1px solid var(--tp-border-subtle);
+  z-index: 20;
+}
+
+.tp-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.tp-topbar-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  min-width: 0;
+  scrollbar-width: none;
+}
+
+.tp-topbar-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tp-doc-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--tp-text-muted);
+  font-size: 12px;
+  cursor: pointer;
+  max-width: 185px;
+  flex-shrink: 0;
+  transition: all 0.12s ease;
+}
+
+.tp-doc-tab:hover {
+  background: var(--tp-hover-bg);
+  color: var(--tp-text);
+}
+
+.tp-doc-tab.active {
+  background: var(--tp-accent-soft);
+  color: var(--tp-heading);
+  border-color: var(--tp-accent-border);
+  font-weight: 600;
+}
+
+.tp-doc-title-single {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tp-heading);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tp-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tp-pill-btn,
+.ide-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 27px;
+  padding: 0 9px;
+  border-radius: 999px;
+  border: 1px solid var(--tp-border);
+  background: var(--tp-paper-bg);
+  color: var(--tp-text-muted);
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.14s ease;
+  white-space: nowrap;
+}
+
+.tp-pill-btn:hover,
+.ide-ai-btn:hover {
+  border-color: var(--tp-accent-border);
+  background: var(--tp-accent-soft);
+  color: var(--tp-accent);
+}
+
+.tp-pill-btn.active {
+  background: var(--tp-accent-soft);
+  border-color: var(--tp-accent-border);
+  color: var(--tp-accent);
+  font-weight: 600;
+}
+
+.tp-pill-btn.ai,
+.ide-ai-btn.primary {
+  background: var(--tp-accent);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.tp-pill-btn.ai:hover,
+.ide-ai-btn.primary:hover {
+  filter: brightness(1.07);
+  color: #ffffff;
+}
+
+.ide-icon-btn,
+.ide-tab-close {
+  width: 27px;
+  height: 27px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: var(--tp-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.ide-tab-close {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.ide-icon-btn:hover,
+.ide-tab-close:hover {
+  background: var(--tp-hover-bg);
+  color: var(--tp-text);
+}
+
+.ide-icon-btn.active {
+  background: var(--tp-accent-soft);
+  color: var(--tp-accent);
+}
+
+/* Floating Popover Menus (AI Companion & Appearance) */
+.tp-popover {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  width: 268px;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--tp-elevated-bg);
+  border: 1px solid var(--tp-border);
+  box-shadow: var(--tp-shadow-float);
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tp-popover-section-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--tp-text-faint);
+  padding: 2px 4px;
+}
+
+.tp-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--tp-text);
+  font-size: 12.5px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.tp-menu-item:hover {
+  background: var(--tp-hover-bg);
+  color: var(--tp-accent);
+}
+
+.tp-menu-item.selected {
+  background: var(--tp-accent-soft);
+  color: var(--tp-accent);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   3. Authentic Typora `#write` Paper Typography (Lapis / VLOOK Inspired)
+   ========================================================================== */
+
+.preview-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 28px clamp(18px, 4.5vw, 54px) 72px;
+  background: var(--tp-paper-bg);
+  scroll-behavior: smooth;
+}
+
+.typora-write {
+  max-width: 880px;
+  margin: 0 auto;
+  color: var(--tp-text);
+  font-family: var(--tp-font-body);
+  font-size: var(--tp-doc-font-size, 15px);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+}
+
+/* Headings — Lapis Aesthetic */
+.typora-write h1,
+.typora-write h2,
+.typora-write h3,
+.typora-write h4,
+.typora-write h5 {
+  font-family: var(--tp-font-heading);
+  color: var(--tp-heading);
+  line-height: 1.38;
+  margin-top: 1.65em;
+  margin-bottom: 0.72em;
+  scroll-margin-top: 18px;
+}
+
+.typora-write > h1:first-child,
+.typora-write > h2:first-child {
+  margin-top: 0.2em;
+}
+
+.typora-write h1 {
+  font-size: 1.78em;
+  font-weight: 700;
+  padding-bottom: 0.36em;
+  border-bottom: 2px solid var(--tp-border);
+}
+
+/* Signature Lapis H2 Capsule! */
+.typora-write h2 {
+  font-size: 1.34em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 4px 14px 4px 12px;
+  background: var(--tp-h2-bg);
+  border-left: 4px solid var(--tp-h2-bar);
+  border-radius: 4px 10px 10px 4px;
+}
+
+:root[data-theme-preset="github"] .typora-write h2 {
+  display: block;
+  padding: 0 0 0.3em 0;
+  background: transparent;
+  border-left: none;
+  border-bottom: 1px solid var(--tp-border);
+  border-radius: 0;
+}
+
+.typora-write h3 {
+  font-size: 1.15em;
+  font-weight: 700;
+  padding-left: 10px;
+  border-left: 3px solid var(--tp-accent-border);
+}
+
+:root[data-theme-preset="github"] .typora-write h3 {
+  padding-left: 0;
+  border-left: none;
+}
+
+.typora-write h4 {
+  font-size: 1.04em;
+  font-weight: 700;
+  color: var(--tp-accent);
+}
+
+.typora-write p {
+  margin: 0.78em 0;
+}
+
+.typora-write strong {
+  color: var(--tp-heading);
+  font-weight: 650;
+}
+
+.typora-write a {
+  color: var(--tp-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--tp-accent-border);
+  transition: border-color 0.14s ease;
+}
+
+.typora-write a:hover {
+  border-bottom-color: var(--tp-accent);
+}
+
+.typora-write hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--tp-border), transparent);
+  margin: 2em 0;
+}
+
+.typora-write ul,
+.typora-write ol {
+  padding-left: 1.55em;
+  margin: 0.7em 0;
+}
+
+.typora-write li {
+  margin: 0.32em 0;
+}
+
+.typora-write li::marker {
+  color: var(--tp-accent);
+}
+
+/* Inline Code & Code Fences */
+.typora-write code {
+  font-family: var(--tp-font-mono);
+  font-size: 0.87em;
+  padding: 0.16em 0.46em;
+  margin: 0 0.12em;
+  border-radius: 5px;
+  background: var(--tp-code-inline-bg);
+  color: var(--tp-code-inline-fg);
+}
+
+.typora-write pre {
+  background: var(--tp-code-bg);
+  border: 1px solid var(--tp-border);
+  border-radius: 11px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 1.15em 0;
+  box-shadow: var(--tp-shadow-soft);
+}
+
+.typora-write pre code {
+  background: transparent;
+  color: var(--tp-text);
+  padding: 0;
+  margin: 0;
+  font-size: 0.88em;
+  line-height: 1.62;
+}
+
+/* Blockquotes & Lapis Soft Callouts */
+.typora-write blockquote {
+  margin: 1.15em 0;
+  padding: 10px 16px;
+  border-left: 3.5px solid var(--tp-accent);
+  background: var(--tp-accent-soft);
+  border-radius: 4px 10px 10px 4px;
+  color: var(--tp-text-muted);
+}
+
+.typora-write blockquote p {
+  margin: 0.35em 0;
+}
+
+/* YAML Frontmatter Pill Bar */
+.tp-frontmatter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  border-radius: 9px;
+  background: var(--tp-sidebar-bg);
+  border: 1px solid var(--tp-border);
+  font-size: 12px;
+  color: var(--tp-text-muted);
+}
+
+/* ==========================================================================
+   4. Scientific Wide Table Engine (Card Mode vs Academic 三线表 Mode)
+   Applies to BOTH Markdown tables AND CSV/TSV datasets!
+   ========================================================================== */
+
+.typora-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25em 0;
+  border-radius: 10px;
+  border: 1px solid var(--tp-border);
+  background: var(--tp-paper-bg);
+  box-shadow: var(--tp-shadow-soft);
+  -webkit-overflow-scrolling: touch;
+}
+
+.typora-table,
+.typora-write table {
+  border-collapse: collapse;
+  width: max-content;
+  min-width: 100%;
+  font-family: var(--tp-font-sans);
+  font-size: 0.92em;
+  line-height: 1.58;
+}
+
+.typora-table th,
+.typora-write th {
+  background: var(--tp-table-head);
+  color: var(--tp-heading);
+  font-weight: 650;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1.5px solid var(--tp-border);
+  border-right: 1px solid var(--tp-border-subtle);
+  white-space: nowrap;
+}
+
+.typora-table th:last-child,
+.typora-write th:last-child,
+.typora-table td:last-child,
+.typora-write td:last-child {
+  border-right: none;
+}
+
+.typora-table td,
+.typora-write td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--tp-border-subtle);
+  border-right: 1px solid var(--tp-border-subtle);
+  vertical-align: top;
+  min-width: 84px;
+  max-width: 340px;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.typora-table tbody tr:nth-child(even) td,
+.typora-write tbody tr:nth-child(even) td {
+  background: var(--tp-table-zebra);
+}
+
+.typora-table tbody tr:last-child td,
+.typora-write tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.typora-table tbody tr:hover td,
+.typora-write tbody tr:hover td {
+  background: var(--tp-table-hover);
+}
+
+/* Academic Three-Line Table Mode (经典论文三线表) */
+:root[data-table-style="threeline"] .typora-table-scroll {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+:root[data-table-style="threeline"] .typora-table,
+:root[data-table-style="threeline"] .typora-write table {
+  border-top: 2px solid var(--tp-heading);
+  border-bottom: 2px solid var(--tp-heading);
+}
+
+:root[data-table-style="threeline"] .typora-table th,
+:root[data-table-style="threeline"] .typora-write th {
+  background: transparent !important;
+  border-right: none !important;
+  border-bottom: 1.2px solid var(--tp-heading) !important;
+  padding: 9px 14px;
+}
+
+:root[data-table-style="threeline"] .typora-table td,
+:root[data-table-style="threeline"] .typora-write td {
+  background: transparent !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  padding: 8px 14px;
+}
+
+:root[data-table-style="threeline"] .typora-table tbody tr:hover td,
+:root[data-table-style="threeline"] .typora-write tbody tr:hover td {
+  background: var(--tp-table-hover) !important;
+}
+
+/* CSV Wrapper in Paper Style */
+.csv-paper-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px clamp(14px, 3vw, 32px) 24px;
+  background: var(--tp-canvas-bg);
+  overflow: hidden;
+}
+
+.csv-paper-card {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--tp-paper-bg);
+  border-radius: 14px;
+  border: 1px solid var(--tp-border);
+  box-shadow: var(--tp-shadow-soft);
+  overflow: hidden;
+}
+
+.csv-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--tp-border-subtle);
+  background: var(--tp-paper-bg);
+  flex-wrap: wrap;
+}
+
+.csv-table-scroll {
+  flex: 1;
+  overflow: auto;
+  padding: 0 12px 12px;
+}
+
+.csv-table-scroll .typora-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--tp-table-head);
+  cursor: pointer;
+  user-select: none;
+}
+
+:root[data-table-style="threeline"] .csv-table-scroll .typora-table th {
+  background: var(--tp-paper-bg) !important;
+}
+
+/* ==========================================================================
+   5. Unified Code & Notebook Paper Cards
+   ========================================================================== */
+
+.tp-code-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px clamp(12px, 2.8vw, 28px) 18px;
+  background: var(--tp-canvas-bg);
+  overflow: hidden;
+}
+
+.tp-code-card {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--tp-paper-bg);
+  border: 1px solid var(--tp-border);
+  border-radius: 14px;
+  box-shadow: var(--tp-shadow-soft);
+  overflow: hidden;
+}
+
+.tp-code-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 14px;
+  background: var(--tp-code-bg);
+  border-bottom: 1px solid var(--tp-border-subtle);
+  font-size: 11.5px;
+  color: var(--tp-text-muted);
+  flex-wrap: wrap;
+}
+
+.cm-host {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cm-host .cm-editor {
+  height: 100%;
+  outline: none;
+}
+
+.cm-host .cm-scroller {
+  font-family: var(--tp-font-mono);
+  overflow: auto;
+}
+
+.cm-flash-line {
+  background: rgba(72, 112, 172, 0.22) !important;
+  transition: background 0.6s ease;
+}
+
+.tp-heading-flash {
+  background: var(--tp-accent-soft);
+  border-radius: 6px;
+  transition: background 0.8s ease;
+}
+
+/* Mermaid & Notebook Cards */
+.mermaid-card {
+  margin: 16px 0;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid var(--tp-border);
+  background: var(--tp-code-bg);
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.mermaid-card svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.nb-cell {
+  border: 1px solid var(--tp-border);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: var(--tp-paper-bg);
+  box-shadow: var(--tp-shadow-soft);
+}
+
+.nb-cell-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 13px;
+  background: var(--tp-code-bg);
+  border-bottom: 1px solid var(--tp-border-subtle);
+  font-size: 11px;
+  color: var(--tp-text-muted);
+  font-family: var(--tp-font-mono);
+}
+
+.nb-cell-code {
+  margin: 0;
+  padding: 12px 15px;
+  font-family: var(--tp-font-mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  overflow-x: auto;
+  background: var(--tp-code-bg);
+}
+
+.nb-cell-output {
+  border-top: 1px dashed var(--tp-border);
+  padding: 11px 15px;
+  background: var(--tp-paper-bg);
+  font-family: var(--tp-font-mono);
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.tree-json-node {
+  font-family: var(--tp-font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.visual-stage {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-image:
+    linear-gradient(45deg, var(--tp-checker-a) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--tp-checker-a) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--tp-checker-a) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--tp-checker-a) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-color: var(--tp-checker-b);
+}
+
+/* Floating Selection AI Pill (Works in BOTH Markdown & Code!) */
+.ide-float-selection {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--tp-elevated-bg);
+  border: 1px solid var(--tp-accent-border);
+  box-shadow: var(--tp-shadow-float);
+}
+
+.ide-float-label {
+  font-size: 11px;
+  font-family: var(--tp-font-mono);
+  color: var(--tp-accent);
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.ide-outline-kind {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  font-size: 9.5px;
+  font-weight: 700;
+  font-family: var(--tp-font-mono);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ide-outline-line {
+  font-family: var(--tp-font-mono);
+  font-size: 10px;
+  color: var(--tp-text-faint);
+  flex-shrink: 0;
+}
+
+.ide-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 70;
+  background: var(--tp-heading);
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  box-shadow: var(--tp-shadow-float);
+  pointer-events: none;
+}
+
+.ide-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(15, 23, 42, 0.38);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.ide-modal {
+  width: min(560px, 100%);
+  max-height: min(520px, 90vh);
+  background: var(--tp-paper-bg);
+  border: 1px solid var(--tp-border);
+  border-radius: 14px;
+  box-shadow: var(--tp-shadow-float);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ide-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--tp-border-subtle);
+}
+
+.ide-empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+  color: var(--tp-text-muted);
+  gap: 10px;
+  background: var(--tp-paper-bg);
+}
+
+.ide-welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 8px;
+  width: 100%;
+  max-width: 540px;
+  margin-top: 12px;
+}
+
+.ide-welcome-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--tp-border);
+  background: var(--tp-sidebar-bg);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.14s ease;
+}
+
+.ide-welcome-card:hover {
+  border-color: var(--tp-accent-border);
+  background: var(--tp-accent-soft);
+}

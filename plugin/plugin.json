@@ -1,0 +1,15 @@
+{
+  "name": "agy-better-sidebar",
+  "displayName": "Better Sidebar IDE",
+  "version": "2.0.0",
+  "description": "Typora Lapis 极简无框纸感阅读器与侧栏工作台：复刻青金石学术排版、圆角科研表/论文三线表一键切换、最近更新自动展开与零费用 AI 代码/文档伴读。",
+  "logo": "assets/logo.svg",
+  "author": "pvijaypal2000-tech",
+  "homepage": "https://github.com/pvijaypal2000-tech/agy-better-sidebar",
+  "repository": "https://github.com/pvijaypal2000-tech/agy-better-sidebar",
+  "suggestedPrompts": [
+    "在 Better Sidebar 里打开当前项目目录，带我浏览最近改动的文档和代码",
+    "用 Better Sidebar 预览并帮我大白话解读当前项目的核心文件",
+    "打开 Better Sidebar 以 Typora 青金石三线表查看项目路线图和数据表"
+  ]
+}
